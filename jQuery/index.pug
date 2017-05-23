@@ -1,27 +1,35 @@
 html
     head
+        meta(charset="UTF-8")
+        title To Do List
+        link(rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" type="text/css" href="../bower_components/jquery-ui/themes/base/jquery-ui.min.css")
+        link(rel="stylesheet" type="text/css" href="style.css")
     body
-        div.task-list#pending
-            h3 Pending
-            div.todo-task
-                div.task-header Sample Header
-                div.task-date 23/05/2017
-                div.task-description Lorem Ipsum Dolor Sit Amet
+        div#container
+            div#header To Do List
+            div.task-list#pending
+                h3 Pending
 
-        div.task-list#inProgress
-            h3 In Progress
+            div.task-list#inProgress
+                h3 In Progress
 
-        div.task-list#completed
-            h3 Completed
+            div.task-list#completed
+                h3 Completed
 
-        div.task-list
-            h3 Add a task
-            form#toto-form
-                input(type="text" placeholder="Title")
-                textarea(placeholder="Description")
-                input(type="text" placeholder="Due Date (dd/mm/yyyy)")
-                input.btn.btn-primary(type="button" value="Add Task")
+            div.task-list
+                h3 Add a task
+                form#toto-form
+                    input(type="text" placeholder="Title")
+                    textarea(placeholder="Description")
+                    input(type="text" placeholder="Due Date (dd/mm/yyyy)")
+                    input.btn.btn-primary(type="button" value="Add Task")
 
-            input.btn.btn-primary(type="button" value="Clear Data")
+                input.btn.btn-primary(type="button" value="Clear Data")
 
-            div#delete-div Drag Here to Delete
+                div#delete-div Drag Here to Delete
+
+        script(src="../bower_components/jquery/dist/jquery.min.js")
+        script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+        script(src="../bower_components/jquery-ui/jquery-ui.min.js")
+        script(src="script.js")
