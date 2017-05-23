@@ -1,0 +1,17 @@
+{
+  "name": "to-do-list",
+  "description": "To do list",
+  "main": "index.js",
+  "authors": [
+    "Duc Dao <ducdh1@smartosc>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
