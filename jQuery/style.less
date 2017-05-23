@@ -1,0 +1,51 @@
+h3 {
+	text-align: center;
+}
+
+.task-list {
+	width: 250px;
+	float: left;
+	margin: 0 5px;
+	background-color: #e3e3e3;
+	min-height: 240px;
+	border-radius: 10px;
+	padding-bottom: 15px;
+	.todo-task {
+		border-radius: 5px;
+		background-color: #fff;
+		width: 230px;
+		margin: 5px;
+		padding: 5px;
+		> .task-header {
+			font-weight: bold;
+		}
+		> .task-date {
+			font-size: small;
+			font-style: italic;
+		}
+		> .task-description {
+			font-size: smaller;
+		}
+	}
+	form {
+		input, textarea {
+			width: 240px;
+			margin: 1px 5px;
+		}
+		input {
+			height: 30px;
+		}
+		input[type="button"] {
+			width: 100px;
+			margin: 5px;
+		}
+	}
+	#delete-div {
+		background-color: #fff;
+		border: 3px dotted #000;
+		margin: 10px;
+		height: 75px;
+		line-height: 75px;
+		text-align: center;
+	}
+}

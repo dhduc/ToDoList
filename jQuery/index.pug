@@ -1,0 +1,27 @@
+html
+    head
+    body
+        div.task-list#pending
+            h3 Pending
+            div.todo-task
+                div.task-header Sample Header
+                div.task-date 23/05/2017
+                div.task-description Lorem Ipsum Dolor Sit Amet
+
+        div.task-list#inProgress
+            h3 In Progress
+
+        div.task-list#completed
+            h3 Completed
+
+        div.task-list
+            h3 Add a task
+            form#toto-form
+                input(type="text" placeholder="Title")
+                textarea(placeholder="Description")
+                input(type="text" placeholder="Due Date (dd/mm/yyyy)")
+                input.btn.btn-primary(type="button" value="Add Task")
+
+            input.btn.btn-primary(type="button" value="Clear Data")
+
+            div#delete-div Drag Here to Delete
