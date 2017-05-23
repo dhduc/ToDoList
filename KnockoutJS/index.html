@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KnockoutJS</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+    <div id="todoapp">
+        <div class="title">
+            <h1>Todo</h1>
+        </div>
+
+        <form id="create-todo" data-bind="submit: addTask">
+            <input type="text" class="new-todo" data-bind="value: newTaskText" placeholder="What's your mind?">
+        </form>
+
+        <div class="todos">
+            <ul id="todo-list" data-bind="foreach: tasks, visible: tasks().length > 0">
+                <li>
+                    <div class="todo" data-bind="css: { editing: isEditing }, event: { dbclick: startEdit }">
+                        <div class="display" data-bind="css: { done:isDone }">
+                            <input type="checkbox" class="check" data-bind="checked: isDone">
+                            <div class="todo-text" data-bind="text: title"></div>
+                            <a href="javascript:void(0)" class="todo-destroy" data-bind="click: $parent.removeTask">x</a>
+                        </div>
+                        <div class="edit">
+                            <form data-bind="submit: updateTask">
+                                <input data-bind="value: title">
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        You have <b data-bind="text: incompleteTasks().length"></b> incomplete task(s)
+        <span data-bind="visible: incompleteTasks().length == 0"> - it's beer time</span>
+        <a href="javascript:void(0)" id="clear-completed" data-bind="visible: completeTasks().length > 0, click: removeCompleted">Clear Completed Tasks</a>
+    </div>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
