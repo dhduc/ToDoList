@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KnockoutJS</title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+    <div id="todoapp">
+        <div class="title">
+            <h1>Todo</h1>
+        </div>
+        <section id="input-container">
+            <form data-bind="submit: addTask">
+                <input type="text" id="task-input" name="task-input" data-bind="value: newTask" />
+                <input type="submit" class="btn" value="Add Task" />
+            </form>
+        </section>
+
+        <section id="task-container">
+            <h2>Tasks</h2>
+            <div class="task-list" data-bind="foreach: tasks">
+                <article class="task" data-bind="css: { completed: completion() == true }">
+                    <input type="checkbox" class="checkbox" data-bind="click: completeTask">
+                    <span class="task-name" data-bind="text: task"></span>
+                    <span class="task-date" data-bind="text: date"></span>
+                    <a href="javascript:void(0)" class="task-remove" data-bind="click: $root.removeTask">X</a>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

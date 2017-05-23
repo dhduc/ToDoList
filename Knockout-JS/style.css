@@ -1,0 +1,78 @@
+body {
+    line-height: 1;
+    color: black;
+    background: white;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a img {
+    border: none;
+}
+
+html {
+    background: #eeeeee;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    background: #eeeeee;
+    color: #333333;
+}
+
+#todoapp {
+    width: 500px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 20px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+}
+
+#todoapp h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0 30px 0;
+    line-height: 1;
+}
+
+#todoapp h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 0;
+    line-height: 1;
+}
+
+#todoapp input[type=text] {
+    width: 350px;
+    height: 31px;
+}
+
+#todoapp input[type=checkbox] {
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px 10px;
+}
+
+.task {
+    height: 40px;
+}
+
+.task-name {
+    font-size: 15px;
+}
+
+.task-remove {
+    float: right;
+    cursor: pointer;
+    padding: 1px 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
