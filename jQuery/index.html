@@ -1,39 +1,45 @@
-
 <html>
-  <head>
+<head>
     <meta charset="UTF-8"/>
     <title>To Do List</title>
     <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../bower_components/jquery-ui/themes/base/jquery-ui.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">To Do List</div>
-      <div class="task-list" id="pending">
+</head>
+<body>
+<div id="container">
+    <div id="header">To Do List</div>
+    <div class="task-list" id="pending">
         <h3>Pending</h3>
-      </div>
-      <div class="task-list" id="inProgress">
-        <h3>In Progress</h3>
-      </div>
-      <div class="task-list" id="completed">
-        <h3>Completed</h3>
-      </div>
-      <div class="task-list">
-        <h3>Add a task</h3>
-        <form id="toto-form">
-          <input type="text" placeholder="Title"/>
-          <textarea placeholder="Description"></textarea>
-          <input type="text" placeholder="Due Date (dd/mm/yyyy)"/>
-          <input class="btn btn-primary" type="button" value="Add Task"/>
-        </form>
-        <input class="btn btn-primary" type="button" value="Clear Data"/>
-        <div id="delete-div">Drag Here to Delete</div>
-      </div>
     </div>
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+    <div class="task-list" id="inProgress">
+        <h3>In Progress</h3>
+    </div>
+    <div class="task-list" id="completed">
+        <h3>Completed</h3>
+    </div>
+    <div class="task-list">
+        <h3>Add a task</h3>
+        <form id="todo-form">
+            <input type="text" placeholder="Title" required />
+            <textarea placeholder="Description"></textarea>
+            <input type="text" id="datepicker" placeholder="Due Date (dd/mm/yyyy)"/>
+            <input class="btn btn-primary" type="button" value="Add Task" onclick="todo.add()" />
+        </form>
+        <input class="btn btn-primary" type="button" value="Clear Data" onclick="todo.clear()" />
+        <div id="delete-div">Drag Here to Delete</div>
+    </div>
+</div>
+<script src="../bower_components/jquery/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript">
+    $("#datepicker").datepicker();
+    $("#datepicker").datepicker("option", "dateFormat", "dd/mm/yy");
+    $(".task-container").droppable();
+    $(".todo-task").draggable({revert: "valid", revertDuration: 200});
+    todo.init();
+</script>
+</body>
 </html>
