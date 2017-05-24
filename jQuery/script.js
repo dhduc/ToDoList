@@ -1,7 +1,10 @@
-console.log('== CONSOLE READY ==');
+/**
+ * ToDoList
+ * @type {{}}
+ */
 
 var todo = todo || {};
-var data = JSON.parse(localStorage.getItem('todoData'));
+var data = JSON.parse(localStorage.getItem("todoData"));
 data = data || {};
 
 (function (todo, data, $) {
@@ -19,15 +22,6 @@ data = data || {};
         "1": "#pending",
         "2": "#inProgress",
         "3": "#completed"
-    };
-
-    var getDate = function (date) {
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
-        var fullDate = month + "/" + day + "/" + year;
-
-        return fullDate;
     };
 
     var saveToStorage = function (params) {
@@ -101,7 +95,7 @@ data = data || {};
 
                     $("#" + defaults.deleteDiv).hide();
                 }
-            })
+            });
         });
 
         $("#" + options.deleteDiv).droppable({
