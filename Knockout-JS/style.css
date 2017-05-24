@@ -67,6 +67,16 @@ body {
 
 .task-name {
     font-size: 15px;
+    display: inline-block;
+    margin-left: 10px;
+    width: 70%;
+}
+
+.task-date {
+    display: inline-block;
+    font-size: 1em;
+    font-style: italic;
+    color: #d6d6d6;
 }
 
 .task-remove {
@@ -75,4 +85,24 @@ body {
     padding: 1px 5px;
     border: 1px solid #ddd;
     border-radius: 50%;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #2d6bb5;
+    display: inline-block;
+    box-shadow: 0 0 3px #8FA5C6;
+    margin: 0;
+}
+
+.completed .checkbox {
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.completed .task-name, .completed .task-date {
+    text-decoration: line-through;
 }

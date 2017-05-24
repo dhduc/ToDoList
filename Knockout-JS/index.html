@@ -23,13 +23,17 @@
             <h2>Tasks</h2>
             <div class="task-list" data-bind="foreach: tasks">
                 <article class="task" data-bind="css: { completed: completion() == true }">
-                    <input type="checkbox" class="checkbox" data-bind="click: completeTask">
+                    <a href="javascript:void(0)" class="checkbox" data-bind="click: completeTask, html: completeContent"></a>
                     <span class="task-name" data-bind="text: task"></span>
                     <span class="task-date" data-bind="text: date"></span>
                     <a href="javascript:void(0)" class="task-remove" data-bind="click: $root.removeTask">X</a>
                 </article>
             </div>
         </section>
+
+        <div class="footer">
+            <h4><strong>You've <span class="task-left" data-bind="text: completedTask"></span> to do.</strong></h4>
+        </div>
     </div>
 
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
